@@ -4,16 +4,16 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vversionTransactionsAuthorizePost**](TransactionsApi.md#vversiontransactionsauthorizepost) | **POST** /v{version}/Transactions/authorize | Authorization request
-[**vversionTransactionsCancelPost**](TransactionsApi.md#vversiontransactionscancelpost) | **POST** /v{version}/Transactions/cancel | Cancelation request
-[**vversionTransactionsConfirmPost**](TransactionsApi.md#vversiontransactionsconfirmpost) | **POST** /v{version}/Transactions/confirm | Confirmation request
-[**vversionTransactionsCreditPost**](TransactionsApi.md#vversiontransactionscreditpost) | **POST** /v{version}/Transactions/credit | Credit request
-[**vversionTransactionsSettlePost**](TransactionsApi.md#vversiontransactionssettlepost) | **POST** /v{version}/Transactions/settle | Settlement request
-[**vversionTransactionsStatusPost**](TransactionsApi.md#vversiontransactionsstatuspost) | **POST** /v{version}/Transactions/status | Get Status request
-[**vversionTransactionsTokenPost**](TransactionsApi.md#vversiontransactionstokenpost) | **POST** /v{version}/Transactions/token | Get Token request
+[**v1TransactionsAuthorizePost**](TransactionsApi.md#v1transactionsauthorizepost) | **POST** /v1/Transactions/authorize | Authorization request
+[**v1TransactionsCancelPost**](TransactionsApi.md#v1transactionscancelpost) | **POST** /v1/Transactions/cancel | Cancelation request
+[**v1TransactionsConfirmPost**](TransactionsApi.md#v1transactionsconfirmpost) | **POST** /v1/Transactions/confirm | Confirmation request
+[**v1TransactionsCreditPost**](TransactionsApi.md#v1transactionscreditpost) | **POST** /v1/Transactions/credit | Credit request
+[**v1TransactionsSettlePost**](TransactionsApi.md#v1transactionssettlepost) | **POST** /v1/Transactions/settle | Settlement request
+[**v1TransactionsStatusPost**](TransactionsApi.md#v1transactionsstatuspost) | **POST** /v1/Transactions/status | Get Status request
+[**v1TransactionsTokenPost**](TransactionsApi.md#v1transactionstokenpost) | **POST** /v1/Transactions/token | Get Token request
 
-# **vversionTransactionsAuthorizePost**
-> \CembraPay\RestApi\Model\AuthorizationResponse vversionTransactionsAuthorizePost($version, $body)
+# **v1TransactionsAuthorizePost**
+> \CembraPay\RestApi\Model\AuthorizationResponse v1TransactionsAuthorizePost($body)
 
 Authorization request
 
@@ -37,14 +37,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\AuthorizationRequest(); // \CembraPay\RestApi\Model\AuthorizationRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsAuthorizePost($version, $body);
+    $result = $apiInstance->v1TransactionsAuthorizePost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsAuthorizePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsAuthorizePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -53,7 +52,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\AuthorizationRequest**](../Model/AuthorizationRequest.md)|  | [optional]
 
 ### Return type
@@ -71,8 +69,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsCancelPost**
-> \CembraPay\RestApi\Model\CancellationResponse vversionTransactionsCancelPost($version, $body)
+# **v1TransactionsCancelPost**
+> \CembraPay\RestApi\Model\CancellationResponse v1TransactionsCancelPost($body)
 
 Cancelation request
 
@@ -96,14 +94,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CancellationRequest(); // \CembraPay\RestApi\Model\CancellationRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsCancelPost($version, $body);
+    $result = $apiInstance->v1TransactionsCancelPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsCancelPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsCancelPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -112,7 +109,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\CancellationRequest**](../Model/CancellationRequest.md)|  | [optional]
 
 ### Return type
@@ -130,8 +126,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsConfirmPost**
-> \CembraPay\RestApi\Model\ConfirmationResponse vversionTransactionsConfirmPost($version, $body)
+# **v1TransactionsConfirmPost**
+> \CembraPay\RestApi\Model\ConfirmationResponse v1TransactionsConfirmPost($body)
 
 Confirmation request
 
@@ -155,14 +151,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\ConfirmationRequest(); // \CembraPay\RestApi\Model\ConfirmationRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsConfirmPost($version, $body);
+    $result = $apiInstance->v1TransactionsConfirmPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsConfirmPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsConfirmPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -171,7 +166,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\ConfirmationRequest**](../Model/ConfirmationRequest.md)|  | [optional]
 
 ### Return type
@@ -189,8 +183,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsCreditPost**
-> \CembraPay\RestApi\Model\CreditNoteResponse vversionTransactionsCreditPost($version, $body)
+# **v1TransactionsCreditPost**
+> \CembraPay\RestApi\Model\CreditNoteResponse v1TransactionsCreditPost($body)
 
 Credit request
 
@@ -214,14 +208,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CreditNoteRequest(); // \CembraPay\RestApi\Model\CreditNoteRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsCreditPost($version, $body);
+    $result = $apiInstance->v1TransactionsCreditPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsCreditPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsCreditPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -230,7 +223,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\CreditNoteRequest**](../Model/CreditNoteRequest.md)|  | [optional]
 
 ### Return type
@@ -248,8 +240,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsSettlePost**
-> \CembraPay\RestApi\Model\SettlementResponse vversionTransactionsSettlePost($version, $body)
+# **v1TransactionsSettlePost**
+> \CembraPay\RestApi\Model\SettlementResponse v1TransactionsSettlePost($body)
 
 Settlement request
 
@@ -273,14 +265,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\SettlementRequest(); // \CembraPay\RestApi\Model\SettlementRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsSettlePost($version, $body);
+    $result = $apiInstance->v1TransactionsSettlePost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsSettlePost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsSettlePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -289,7 +280,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\SettlementRequest**](../Model/SettlementRequest.md)|  | [optional]
 
 ### Return type
@@ -307,8 +297,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsStatusPost**
-> \CembraPay\RestApi\Model\TransactionStatusResponse vversionTransactionsStatusPost($version, $body)
+# **v1TransactionsStatusPost**
+> \CembraPay\RestApi\Model\TransactionStatusResponse v1TransactionsStatusPost($body)
 
 Get Status request
 
@@ -332,14 +322,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\TransactionStatusRequest(); // \CembraPay\RestApi\Model\TransactionStatusRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsStatusPost($version, $body);
+    $result = $apiInstance->v1TransactionsStatusPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsStatusPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsStatusPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -348,7 +337,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\TransactionStatusRequest**](../Model/TransactionStatusRequest.md)|  | [optional]
 
 ### Return type
@@ -366,8 +354,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionTransactionsTokenPost**
-> \CembraPay\RestApi\Model\TokenLookupResponse vversionTransactionsTokenPost($version, $body)
+# **v1TransactionsTokenPost**
+> \CembraPay\RestApi\Model\TokenLookupResponse v1TransactionsTokenPost($body)
 
 Get Token request
 
@@ -391,14 +379,13 @@ $apiInstance = new CembraPay\RestApi\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\TokenLookupRequest(); // \CembraPay\RestApi\Model\TokenLookupRequest | 
 
 try {
-    $result = $apiInstance->vversionTransactionsTokenPost($version, $body);
+    $result = $apiInstance->v1TransactionsTokenPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->vversionTransactionsTokenPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TransactionsApi->v1TransactionsTokenPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -407,7 +394,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\TokenLookupRequest**](../Model/TokenLookupRequest.md)|  | [optional]
 
 ### Return type

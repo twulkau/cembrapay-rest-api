@@ -4,10 +4,10 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vversionScreeningPost**](ScreeningApi.md#vversionscreeningpost) | **POST** /v{version}/Screening | Screening request
+[**v1ScreeningPost**](ScreeningApi.md#v1screeningpost) | **POST** /v1/Screening | Screening request
 
-# **vversionScreeningPost**
-> \CembraPay\RestApi\Model\ScreeningResponse vversionScreeningPost($version, $body)
+# **v1ScreeningPost**
+> \CembraPay\RestApi\Model\ScreeningResponse v1ScreeningPost($body)
 
 Screening request
 
@@ -31,14 +31,13 @@ $apiInstance = new CembraPay\RestApi\Api\ScreeningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\ScreeningRequest(); // \CembraPay\RestApi\Model\ScreeningRequest | 
 
 try {
-    $result = $apiInstance->vversionScreeningPost($version, $body);
+    $result = $apiInstance->v1ScreeningPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ScreeningApi->vversionScreeningPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ScreeningApi->v1ScreeningPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -47,7 +46,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\ScreeningRequest**](../Model/ScreeningRequest.md)|  | [optional]
 
 ### Return type

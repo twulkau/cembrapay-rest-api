@@ -4,11 +4,11 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vversionCheckoutPost**](CheckoutApi.md#vversioncheckoutpost) | **POST** /v{version}/Checkout | Checkout request
-[**vversionCheckoutStatusPost**](CheckoutApi.md#vversioncheckoutstatuspost) | **POST** /v{version}/Checkout/status | Checkout status request
+[**v1CheckoutPost**](CheckoutApi.md#v1checkoutpost) | **POST** /v1/Checkout | Checkout request
+[**v1CheckoutStatusPost**](CheckoutApi.md#v1checkoutstatuspost) | **POST** /v1/Checkout/status | Checkout status request
 
-# **vversionCheckoutPost**
-> \CembraPay\RestApi\Model\CheckoutResponse vversionCheckoutPost($version, $body)
+# **v1CheckoutPost**
+> \CembraPay\RestApi\Model\CheckoutResponse v1CheckoutPost($body)
 
 Checkout request
 
@@ -32,14 +32,13 @@ $apiInstance = new CembraPay\RestApi\Api\CheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CheckoutRequest(); // \CembraPay\RestApi\Model\CheckoutRequest | 
 
 try {
-    $result = $apiInstance->vversionCheckoutPost($version, $body);
+    $result = $apiInstance->v1CheckoutPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CheckoutApi->vversionCheckoutPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CheckoutApi->v1CheckoutPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -48,7 +47,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\CheckoutRequest**](../Model/CheckoutRequest.md)|  | [optional]
 
 ### Return type
@@ -66,8 +64,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionCheckoutStatusPost**
-> \CembraPay\RestApi\Model\CheckoutStatusResponse vversionCheckoutStatusPost($version, $body)
+# **v1CheckoutStatusPost**
+> \CembraPay\RestApi\Model\CheckoutStatusResponse v1CheckoutStatusPost($body)
 
 Checkout status request
 
@@ -91,14 +89,13 @@ $apiInstance = new CembraPay\RestApi\Api\CheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CheckoutStatusRequest(); // \CembraPay\RestApi\Model\CheckoutStatusRequest | 
 
 try {
-    $result = $apiInstance->vversionCheckoutStatusPost($version, $body);
+    $result = $apiInstance->v1CheckoutStatusPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CheckoutApi->vversionCheckoutStatusPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CheckoutApi->v1CheckoutStatusPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -107,7 +104,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\CheckoutStatusRequest**](../Model/CheckoutStatusRequest.md)|  | [optional]
 
 ### Return type

@@ -4,10 +4,10 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vversionSignaturePublicKeyPost**](SignaturePublicKeyApi.md#vversionsignaturepublickeypost) | **POST** /v{version}/SignaturePublicKey | Public key
+[**v1SignaturePublicKeyPost**](SignaturePublicKeyApi.md#v1signaturepublickeypost) | **POST** /v1/SignaturePublicKey | Public key
 
-# **vversionSignaturePublicKeyPost**
-> \CembraPay\RestApi\Model\Certificate vversionSignaturePublicKeyPost($version, $body)
+# **v1SignaturePublicKeyPost**
+> \CembraPay\RestApi\Model\Certificate v1SignaturePublicKeyPost($body)
 
 Public key
 
@@ -31,14 +31,13 @@ $apiInstance = new CembraPay\RestApi\Api\SignaturePublicKeyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CertificateParameters(); // \CembraPay\RestApi\Model\CertificateParameters | 
 
 try {
-    $result = $apiInstance->vversionSignaturePublicKeyPost($version, $body);
+    $result = $apiInstance->v1SignaturePublicKeyPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SignaturePublicKeyApi->vversionSignaturePublicKeyPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SignaturePublicKeyApi->v1SignaturePublicKeyPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -47,7 +46,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\CertificateParameters**](../Model/CertificateParameters.md)|  | [optional]
 
 ### Return type

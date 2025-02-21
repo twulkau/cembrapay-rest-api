@@ -4,11 +4,11 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vversionRegistrationsPost**](RegistrationsApi.md#vversionregistrationspost) | **POST** /v{version}/Registrations | Register request
-[**vversionRegistrationsStatusPost**](RegistrationsApi.md#vversionregistrationsstatuspost) | **POST** /v{version}/Registrations/status | Registration Status request
+[**v1RegistrationsPost**](RegistrationsApi.md#v1registrationspost) | **POST** /v1/Registrations | Register request
+[**v1RegistrationsStatusPost**](RegistrationsApi.md#v1registrationsstatuspost) | **POST** /v1/Registrations/status | Registration Status request
 
-# **vversionRegistrationsPost**
-> \CembraPay\RestApi\Model\RegistrationResponse vversionRegistrationsPost($version, $body)
+# **v1RegistrationsPost**
+> \CembraPay\RestApi\Model\RegistrationResponse v1RegistrationsPost($body)
 
 Register request
 
@@ -32,14 +32,13 @@ $apiInstance = new CembraPay\RestApi\Api\RegistrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\RegistrationRequest(); // \CembraPay\RestApi\Model\RegistrationRequest | 
 
 try {
-    $result = $apiInstance->vversionRegistrationsPost($version, $body);
+    $result = $apiInstance->v1RegistrationsPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RegistrationsApi->vversionRegistrationsPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RegistrationsApi->v1RegistrationsPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -48,7 +47,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\RegistrationRequest**](../Model/RegistrationRequest.md)|  | [optional]
 
 ### Return type
@@ -66,8 +64,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **vversionRegistrationsStatusPost**
-> \CembraPay\RestApi\Model\RegistrationStatusResponse vversionRegistrationsStatusPost($version, $body)
+# **v1RegistrationsStatusPost**
+> \CembraPay\RestApi\Model\RegistrationStatusResponse v1RegistrationsStatusPost($body)
 
 Registration Status request
 
@@ -91,14 +89,13 @@ $apiInstance = new CembraPay\RestApi\Api\RegistrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\RegistrationStatusRequest(); // \CembraPay\RestApi\Model\RegistrationStatusRequest | 
 
 try {
-    $result = $apiInstance->vversionRegistrationsStatusPost($version, $body);
+    $result = $apiInstance->v1RegistrationsStatusPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling RegistrationsApi->vversionRegistrationsStatusPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling RegistrationsApi->v1RegistrationsStatusPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -107,7 +104,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **version** | **string**| The requested API version |
  **body** | [**\CembraPay\RestApi\Model\RegistrationStatusRequest**](../Model/RegistrationStatusRequest.md)|  | [optional]
 
 ### Return type

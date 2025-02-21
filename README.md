@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/twulkau/cembrapay-rest-api.git"
+      "url": "https://github.com/git_user_id/git_repo_id.git"
     }
   ],
   "require": {
-    "twulkau/cembrapay-rest-api": "*@dev"
+    "git_user_id/git_repo_id": "*@dev"
   }
 }
 ```
@@ -72,14 +72,13 @@ $apiInstance = new CembraPay\RestApi\Api\CheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CheckoutRequest(); // \CembraPay\RestApi\Model\CheckoutRequest | 
 
 try {
-    $result = $apiInstance->vversionCheckoutPost($version, $body);
+    $result = $apiInstance->v1CheckoutPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CheckoutApi->vversionCheckoutPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CheckoutApi->v1CheckoutPost: ', $e->getMessage(), PHP_EOL;
 }
 
 // Configure API key authorization: Basic
@@ -97,14 +96,13 @@ $apiInstance = new CembraPay\RestApi\Api\CheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | The requested API version
 $body = new \CembraPay\RestApi\Model\CheckoutStatusRequest(); // \CembraPay\RestApi\Model\CheckoutStatusRequest | 
 
 try {
-    $result = $apiInstance->vversionCheckoutStatusPost($version, $body);
+    $result = $apiInstance->v1CheckoutStatusPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CheckoutApi->vversionCheckoutStatusPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CheckoutApi->v1CheckoutStatusPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -115,19 +113,19 @@ All URIs are relative to *https://ext-test.api.cembrapay.ch*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CheckoutApi* | [**vversionCheckoutPost**](docs/Api/CheckoutApi.md#vversioncheckoutpost) | **POST** /v{version}/Checkout | Checkout request
-*CheckoutApi* | [**vversionCheckoutStatusPost**](docs/Api/CheckoutApi.md#vversioncheckoutstatuspost) | **POST** /v{version}/Checkout/status | Checkout status request
-*RegistrationsApi* | [**vversionRegistrationsPost**](docs/Api/RegistrationsApi.md#vversionregistrationspost) | **POST** /v{version}/Registrations | Register request
-*RegistrationsApi* | [**vversionRegistrationsStatusPost**](docs/Api/RegistrationsApi.md#vversionregistrationsstatuspost) | **POST** /v{version}/Registrations/status | Registration Status request
-*ScreeningApi* | [**vversionScreeningPost**](docs/Api/ScreeningApi.md#vversionscreeningpost) | **POST** /v{version}/Screening | Screening request
-*SignaturePublicKeyApi* | [**vversionSignaturePublicKeyPost**](docs/Api/SignaturePublicKeyApi.md#vversionsignaturepublickeypost) | **POST** /v{version}/SignaturePublicKey | Public key
-*TransactionsApi* | [**vversionTransactionsAuthorizePost**](docs/Api/TransactionsApi.md#vversiontransactionsauthorizepost) | **POST** /v{version}/Transactions/authorize | Authorization request
-*TransactionsApi* | [**vversionTransactionsCancelPost**](docs/Api/TransactionsApi.md#vversiontransactionscancelpost) | **POST** /v{version}/Transactions/cancel | Cancelation request
-*TransactionsApi* | [**vversionTransactionsConfirmPost**](docs/Api/TransactionsApi.md#vversiontransactionsconfirmpost) | **POST** /v{version}/Transactions/confirm | Confirmation request
-*TransactionsApi* | [**vversionTransactionsCreditPost**](docs/Api/TransactionsApi.md#vversiontransactionscreditpost) | **POST** /v{version}/Transactions/credit | Credit request
-*TransactionsApi* | [**vversionTransactionsSettlePost**](docs/Api/TransactionsApi.md#vversiontransactionssettlepost) | **POST** /v{version}/Transactions/settle | Settlement request
-*TransactionsApi* | [**vversionTransactionsStatusPost**](docs/Api/TransactionsApi.md#vversiontransactionsstatuspost) | **POST** /v{version}/Transactions/status | Get Status request
-*TransactionsApi* | [**vversionTransactionsTokenPost**](docs/Api/TransactionsApi.md#vversiontransactionstokenpost) | **POST** /v{version}/Transactions/token | Get Token request
+*CheckoutApi* | [**v1CheckoutPost**](docs/Api/CheckoutApi.md#v1checkoutpost) | **POST** /v1/Checkout | Checkout request
+*CheckoutApi* | [**v1CheckoutStatusPost**](docs/Api/CheckoutApi.md#v1checkoutstatuspost) | **POST** /v1/Checkout/status | Checkout status request
+*RegistrationsApi* | [**v1RegistrationsPost**](docs/Api/RegistrationsApi.md#v1registrationspost) | **POST** /v1/Registrations | Register request
+*RegistrationsApi* | [**v1RegistrationsStatusPost**](docs/Api/RegistrationsApi.md#v1registrationsstatuspost) | **POST** /v1/Registrations/status | Registration Status request
+*ScreeningApi* | [**v1ScreeningPost**](docs/Api/ScreeningApi.md#v1screeningpost) | **POST** /v1/Screening | Screening request
+*SignaturePublicKeyApi* | [**v1SignaturePublicKeyPost**](docs/Api/SignaturePublicKeyApi.md#v1signaturepublickeypost) | **POST** /v1/SignaturePublicKey | Public key
+*TransactionsApi* | [**v1TransactionsAuthorizePost**](docs/Api/TransactionsApi.md#v1transactionsauthorizepost) | **POST** /v1/Transactions/authorize | Authorization request
+*TransactionsApi* | [**v1TransactionsCancelPost**](docs/Api/TransactionsApi.md#v1transactionscancelpost) | **POST** /v1/Transactions/cancel | Cancelation request
+*TransactionsApi* | [**v1TransactionsConfirmPost**](docs/Api/TransactionsApi.md#v1transactionsconfirmpost) | **POST** /v1/Transactions/confirm | Confirmation request
+*TransactionsApi* | [**v1TransactionsCreditPost**](docs/Api/TransactionsApi.md#v1transactionscreditpost) | **POST** /v1/Transactions/credit | Credit request
+*TransactionsApi* | [**v1TransactionsSettlePost**](docs/Api/TransactionsApi.md#v1transactionssettlepost) | **POST** /v1/Transactions/settle | Settlement request
+*TransactionsApi* | [**v1TransactionsStatusPost**](docs/Api/TransactionsApi.md#v1transactionsstatuspost) | **POST** /v1/Transactions/status | Get Status request
+*TransactionsApi* | [**v1TransactionsTokenPost**](docs/Api/TransactionsApi.md#v1transactionstokenpost) | **POST** /v1/Transactions/token | Get Token request
 
 ## Documentation For Models
 
